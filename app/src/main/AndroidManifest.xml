@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".QuestionsActivity" />
         <activity android:name=".BeforeTestActivity" />
-        <activity android:name=".FinishActivity"></activity>
+        <activity android:name=".FinishActivity" />
+        <activity android:name=".AfterTestActivity"></activity>
     </application>
 
 </manifest>

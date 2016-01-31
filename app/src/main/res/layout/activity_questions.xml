@@ -13,16 +13,34 @@
         android:orientation="vertical"
         android:padding="10dp">
 
-        <TextView
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:text="@string/textViewQuestionFinish"
-            android:id="@+id/textViewQuestionFinish"
             android:layout_weight="10"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:gravity="center_vertical|right"
-            android:padding="5dp" />
+            android:weightSum="100">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textViewCountOfQuestions"
+                android:layout_weight="30"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:gravity="left|center_vertical"
+                android:padding="5dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="@string/textViewQuestionFinish"
+                android:id="@+id/textViewQuestionFinish"
+                android:layout_weight="70"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:gravity="center_vertical|right"
+                android:padding="5dp" />
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
@@ -80,7 +98,7 @@
                 android:id="@+id/textViewQuestionBack"
                 android:layout_weight="30"
                 android:textColor="@android:color/white"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:gravity="left|center_vertical"
                 android:padding="5dp" />
 
@@ -100,7 +118,7 @@
                 android:id="@+id/textViewQuestionSkip"
                 android:layout_weight="30"
                 android:textColor="@android:color/white"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:gravity="left|center_vertical"
                 android:padding="5dp" />
         </LinearLayout>

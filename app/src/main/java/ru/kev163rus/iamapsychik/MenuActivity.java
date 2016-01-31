@@ -109,21 +109,15 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
 //                FragmentManager manager = getSupportFragmentManager();
 //                MyDialogFragment myDialogFragment = new MyDialogFragment();
 //                myDialogFragment.show(manager, "dialog");
-                Questions.itFastTest = true;
-                Questions.countOfQuestions = 10;
+                setData("Fast");
                 startActivity(activityBeforeTest);
-                //finish();
                 break;
             case R.id.textViewStartFullTest:
-//                finish();
-                Questions.itFullTest = true;
-                Questions.countOfQuestions = 25;
+                setData("Full");
                 startActivity(activityBeforeTest);
                 break;
             case R.id.textViewStartAddTest:
-//                finish();
-                Questions.itAddTest = true;
-                Questions.countOfQuestions = 0;
+                setData("Add");
                 startActivity(activityBeforeTest);
                 break;
             case R.id.textViewExit:
@@ -144,6 +138,32 @@ public class MenuActivity extends FragmentActivity implements View.OnClickListen
         Questions.itFastTest = false;
         Questions.itFullTest = false;
         Questions.itAddTest = false;
+        Questions.arrayUserResult = null;
+    }
+
+    private void setData(String itemMenu){
+
+        switch (itemMenu){
+            case "Fast":
+                Questions.itFastTest = true;
+                Questions.countOfQuestions = 3;
+                break;
+            case "Full":
+                Questions.itFullTest = true;
+                Questions.countOfQuestions = 25;
+                break;
+            case "Add":
+                Questions.itAddTest = true;
+                Questions.countOfQuestions = 0;
+                break;
+            default:
+                Questions.itFastTest = true;
+                Questions.countOfQuestions = 10;
+                break;
+        }
+
+        Questions.arrayUserResult = new int[Questions.countOfQuestions];
+
     }
 
     Animation.AnimationListener animationFadeOutListener = new Animation.AnimationListener() {

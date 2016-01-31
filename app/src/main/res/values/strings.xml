@@ -8,9 +8,13 @@
     <string name="LogoTextLine1">I\'m</string>
     <string name="LogoTextLine2">a psychik?</string>
     <string name="imageViewDescription">New Season</string>
+    <string name="textViewQuestionCountOfQuestions">of</string>
     <string name="textViewDialogBeforeTestYes">Да, я понимаю это. Начинаем тест!</string>
-    <string name="textytViewDialogBeforeTestNo">Нет, я не готов.</string>
-    <string name="textViewDialogBeforeTestText">Рещультат данного теста может повлиять на ваше восприятие окружающего мира. Вы готовы принять на себя такую ответственность?</string>
+    <string name="textViewDialogBeforeTestNo">Нет, я не готов.</string>
+    <string name="textViewDialogBeforeTestText">Результат данного теста может повлиять на ваше восприятие окружающего мира. Вы готовы принять на себя такую ответственность?</string>
+    <string name="textViewDialogAfterTestText">\n Результаты испытания получены, проанализированы с помощью различных схем и уже готов результат. \n Вы согласны увидеть их?</string>
+    <string name="textViewDialogAfterTestYes">Показать мой результат.</string>
+    <string name="textViewDialogAfterTestNo">Нет, мне нужно исправить некоторые ответы.</string>
     <string name="textViewQuestionFinish">Завершить испытание</string>
     <string name="textViewQuestionBack"><![CDATA[< Назад]]></string>
     <string name="textViewQuestionSkip"><![CDATA[Пропустить >]]></string>
@@ -26,5 +30,7 @@
     <string name="answerFast3_1">Постоянно ощущаю когда на меня смотрят сзади.</string>
     <string name="answerFast3_2">Случайно замечаю взгляд другого человека на себе.</string>
     <string name="answerFast3_3">Никогда не испытывал такое.</string>
+
+
 
 </resources>

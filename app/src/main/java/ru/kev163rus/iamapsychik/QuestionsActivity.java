@@ -1,6 +1,7 @@
 package ru.kev163rus.iamapsychik;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 public class QuestionsActivity extends Activity implements View.OnClickListener {
 
-    private TextView textViewQuestionFinish, textViewQuestionText, textViewQuestionAnswer1, textViewQuestionAnswer2, textViewQuestionAnswer3,
+    private TextView textViewQuestionCountOfQuestions, textViewQuestionFinish, textViewQuestionText, textViewQuestionAnswer1, textViewQuestionAnswer2, textViewQuestionAnswer3,
             textViewQuestionBack, textViewQuestionSkip;
 
     @Override
@@ -24,6 +25,10 @@ public class QuestionsActivity extends Activity implements View.OnClickListener 
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_questions);
+
+        textViewQuestionCountOfQuestions = (TextView) findViewById(R.id.textViewCountOfQuestions);
+        textViewQuestionCountOfQuestions.setShadowLayer(7f, 25f, 15f, ContextCompat.getColor(this, R.color.colorMenuItemShadow2));
+        textViewQuestionCountOfQuestions.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/crashctt.ttf"));
 
         textViewQuestionFinish = (TextView) findViewById(R.id.textViewQuestionFinish);
         textViewQuestionFinish.setShadowLayer(7f, 25f, 15f, ContextCompat.getColor(this, R.color.colorMenuItemShadow2));
@@ -66,6 +71,8 @@ public class QuestionsActivity extends Activity implements View.OnClickListener 
 
     private void setQuestionAndAnswers(boolean itFastTest, int indexOfQuestion){
 
+        String textToTextView = String.valueOf(Questions.indexOfQuestion) + " " + getString(R.string.textViewQuestionCountOfQuestions) + " " + String.valueOf(Questions.countOfQuestions);
+        textViewQuestionCountOfQuestions.setText(textToTextView);
         textViewQuestionText.setText(getQuestionText(itFastTest, indexOfQuestion));
         textViewQuestionAnswer1.setText(getAnswer1Text(itFastTest, indexOfQuestion));
         textViewQuestionAnswer2.setText(getAnswer2Text(itFastTest, indexOfQuestion));
@@ -178,35 +185,36 @@ public class QuestionsActivity extends Activity implements View.OnClickListener 
 
         switch(v.getId()) {
             case R.id.textViewQuestionAnswer1:
-                setNewQuestion(true);
+                setNewQuestion(true, 3);
                 break;
             case R.id.textViewQuestionAnswer2:
-                setNewQuestion(true);
+                setNewQuestion(true, 2);
                 break;
             case R.id.textViewQuestionAnswer3:
-                setNewQuestion(true);
+                setNewQuestion(true, 1);
                 break;
             case R.id.textViewQuestionFinish:
+                finishTest();
                 break;
             case R.id.textViewQuestionBack:
-                setNewQuestion(false);
+                setNewQuestion(false, 0);
                 break;
             case R.id.textViewQuestionSkip:
-                setNewQuestion(true);
+                setNewQuestion(true, 0);
                 break;
         }
 
     }
 
-    private void setNewQuestion(boolean isIncrement){
+    private void setNewQuestion(boolean isIncrement, int userChoise){
 
-        if (isIncrement){
+        Questions.arrayUserResult[Questions.indexOfQuestion - 1] = userChoise;
+
+        if (isIncrement & Questions.indexOfQuestion < Questions.countOfQuestions){
             Questions.indexOfQuestion++;
-        }else{
+        }else if (!isIncrement & Questions.indexOfQuestion > 1) {
             Questions.indexOfQuestion--;
-        }
-
-        if (Questions.indexOfQuestion > Questions.countOfQuestions){
+        }else if (isIncrement & Questions.indexOfQuestion == Questions.countOfQuestions){
             finishTest();
         }
 
@@ -216,6 +224,7 @@ public class QuestionsActivity extends Activity implements View.OnClickListener 
 
     private void finishTest(){
 
+        startActivity(new Intent(this, AfterTestActivity.class));
     }
 }
 
