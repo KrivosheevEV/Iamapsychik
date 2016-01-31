@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">I\'m a psychik?</string>
+    <string name="title_activity_menu">I\'m a psychik?</string>
+    <string name="butStartFastTest">Start fast study</string>
+    <string name="butStartFullTest">Start accurate study</string>
+    <string name="butStartAnotherTest">Another test</string>
+    <string name="butExit">Exit</string>
+    <string name="LogoTextLine1">I\'m</string>
+    <string name="LogoTextLine2">a psychik?</string>
+    <string name="imageViewDescription">New Season</string>
+    <string name="textViewDialogBeforeTestYes">Да, я понимаю это. Начинаем тест!</string>
+    <string name="textytViewDialogBeforeTestNo">Нет, я не готов.</string>
+    <string name="textViewDialogBeforeTestText">Рещультат данного теста может повлиять на ваше восприятие окружающего мира. Вы готовы принять на себя такую ответственность?</string>
+    <string name="textViewQuestionFinish">Завершить испытание</string>
+    <string name="textViewQuestionBack"><![CDATA[< Назад]]></string>
+    <string name="textViewQuestionSkip"><![CDATA[Пропустить >]]></string>
+    <string name="questionFast1">Снились ли Вам сны, которые потом повторялись в реальной жизни?</string>
+    <string name="answerFast1_1">Да, такие сны мне сняться часто.</string>
+    <string name="answerFast1_2">Иногда бывают такие сны.</string>
+    <string name="answerFast1_3">Никогда не снились. Считаю это совпадением.</string>
+    <string name="questionFast2">Смотрели ли вы по необъяснимой причине на телефон, перед тем как он начал звонить?</string>
+    <string name="answerFast2_1">Очень часто такое случается.</string>
+    <string name="answerFast2_2">Такое случается со мной.</string>
+    <string name="answerFast2_3">Не было ни разу.</string>
+    <string name="questionFast3">Чувствуете ли Вы взгляд другого человека?</string>
+    <string name="answerFast3_1">Постоянно ощущаю когда на меня смотрят сзади.</string>
+    <string name="answerFast3_2">Случайно замечаю взгляд другого человека на себе.</string>
+    <string name="answerFast3_3">Никогда не испытывал такое.</string>
+
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.kev163rus.iamapsychik.MenuActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="100"
+        android:background="@drawable/menubackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/textViewLogoLine1"
+            android:layout_weight="15"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:gravity="left"
+            android:text="@string/LogoTextLine1"
+            android:alpha="50" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/textViewLogoLine2"
+            android:layout_weight="20"
+            android:textColor="@android:color/white"
+            android:textSize="35sp"
+            android:text="@string/LogoTextLine2"
+            android:gravity="left" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/butStartFastTest"
+            android:id="@+id/textViewStartFastTest"
+            android:layout_weight="10"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/butStartFullTest"
+            android:id="@+id/textViewStartFullTest"
+            android:layout_weight="10"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/butStartAnotherTest"
+            android:id="@+id/textViewStartAddTest"
+            android:layout_weight="10"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/butExit"
+            android:id="@+id/textViewExit"
+            android:layout_weight="10"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/imageViewHandNewSeason"
+            android:layout_weight="10"
+            android:src="@drawable/handnewseason"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/imageViewDescription" />
+    </LinearLayout>
+
+</RelativeLayout>

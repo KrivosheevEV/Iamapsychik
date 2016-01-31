@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="butStartAnotherTest">Проверочный тест</string>
+    <string name="butStartFastTest">Быстрое испытание</string>
+    <string name="butStartFullTest">Точное испытание</string>
+    <string name="app_name">Я - экстрасенс?</string>
+    <string name="title_activity_menu">Я - экстрасенс?</string>
+    <string name="butExit">Выход</string>
+    <string name="LogoTextLine1">Я -</string>
+    <string name="LogoTextLine2">экстрасенс?</string>
+    <string name="imageViewDescription">Новый сезон</string>
+    <string name="questionFast1">Снились ли Вам сны, которые потом повторялись в реальной жизни?</string>
+    <string name="textViewDialogBeforeTestYes">Да, я понимаю это. \nНачать испытание!</string>
+    <string name="textytViewDialogBeforeTestNo">Нет, мне ещё рано делать это.</string>
+    <string name="textViewDialogBeforeTestText">\n Результат данного теста может повлиять на ваше восприятие окружающего мира. \n Вы готовы принять на себя такую ответственность?</string>
+    <string name="textViewQuestionFinish">Завершить испытание</string>
+    <string name="textViewQuestionBack"><![CDATA[< Назад]]></string>
+    <string name="textViewQuestionSkip"><![CDATA[Пропустить >]]></string>
+    <string name="questionFast2">Смотрели ли вы по необъяснимой причине на телефон, перед тем как он начал звонить?</string>
+    <string name="questionFast3">Чувствуете ли Вы взгляд другого человека?</string>
+    <string name="answerFast1_1">Да, такие сны мне сняться часто.</string>
+</resources>
